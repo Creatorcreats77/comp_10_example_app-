@@ -12,17 +12,17 @@
 
                 <ul class="flex flex-col gap-8 font-semibold text-2xl text-slate-900 lg:flex-row max-lg:p-6">
                     <li>
-                    <a href="/"
+                    <a href="{{ route('home') }}"
                         class="text-blue-500 transition delay-150 duration-200 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-gray-500"
                         aria-current="page">Home</a>
                     </li>
                      <li>
-                    <a href="/about"
+                    <a href="{{ route('about') }}"
                         class="text-blue-500 transition delay-150 duration-200 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-gray-500"
                         aria-current="page">About</a>
                     </li>
                       <li>
-                    <a href="/contact"
+                    <a href="{{ route('contact') }}"
                         class="text-blue-500 transition delay-150 duration-200 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-gray-500"
                         aria-current="page">Contact</a>
                     </li>
