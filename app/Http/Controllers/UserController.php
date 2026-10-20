@@ -11,11 +11,8 @@ class UserController extends Controller
 
         $users = User::all();
         // dump and die.   Ekrana cykaryar we yzyndaky komandalary isletmeyar
-        dd($users);   
-        dd("Jennet");
-        
-
-
+        return view('home', compact('users'));   
+    
     }
 
     public function create(){
