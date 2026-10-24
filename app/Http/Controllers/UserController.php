@@ -25,8 +25,7 @@ class UserController extends Controller
     }
 
 
-    public function delete(){
-   
-
+    public function destroy($id){
+        return $id;
     }
 }

@@ -23,7 +23,7 @@ Home
 
 <div class="flex justify-between text-2xl mx-6 py-4 border border-gray-400 rounded-2xl">
     <div>
-        Bizin ulanyjylarymyz: 
+        Bizin ulanyjylarymyz:
     </div>
 
     <div>
@@ -33,7 +33,7 @@ Home
 
 <div class="grid grid-cols-2 gap-4 text-2xl ">
     @foreach ($users as $user)
-        <div class="shadow-xl p-6 m-6 rounded-2xl bg-green-300 hover:bg-green-400 inset-shadow-sm inset-shadow-green-500">
+    <div class="shadow-xl p-6 m-6 rounded-2xl bg-green-300 hover:bg-green-400 inset-shadow-sm inset-shadow-green-500">
 
         <div>
             <b>id:</b> {{$user->id}}
@@ -54,10 +54,18 @@ Home
         <div>
             <b class="text-green-700 h">Age: </b> {{$user->age}}
         </div>
-        
+
         <div z>
             <b class="text-yellow-600">I want to learn:</b> {{$user->skill_wanted}}
         </div>
+
+        <form class="flex justify-end" action="/user/delete/{{$user->id}}" method="post">
+            @method("DELETE")
+            <button
+                class="border border-none bg-red-400 hover:bg-red-500 cursor-pointer text-white text-sm px-3 py-2 rounded"
+                type="submit">DELETE
+            </button>
+        </form>
 
 
     </div>
