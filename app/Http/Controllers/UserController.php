@@ -15,9 +15,26 @@ class UserController extends Controller
         return view('home', compact('users'));
     }
 
-    public function create() {}
+    public function create() {
+
+    }
+
+
+    
+
+
+
+
+
 
     public function update() {}
+
+
+
+
+
+
+
 
 
     public function destroy($id)

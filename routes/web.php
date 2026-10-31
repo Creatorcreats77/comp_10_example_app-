@@ -30,3 +30,10 @@ Route::get('/contact', function () {
 
 Route::delete('/user/delete/{id}', [UserController::class, 'destroy']);
 
+
+
+
+
+Route::get('/category', [CategoryController::class, 'index']);
+
+

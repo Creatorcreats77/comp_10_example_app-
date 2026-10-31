@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\Car;
+use App\Models\Category;
+use App\Models\Product;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -24,6 +26,17 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+
+        $categories = Category::factory(3)->create();      
+
+        // $categories = ['T-shirt', "Shoes", "Bags"] 
+
+        foreach($categories as $category){
+            Product::factory(20)->create([
+                'category_id' => $category->id,
+            ]);
+        }
 
     }
 }
