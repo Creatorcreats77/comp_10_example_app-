@@ -60,6 +60,7 @@ Home
         </div>
 
         <form class="flex justify-end" action="/user/delete/{{$user->id}}" method="post">
+            @csrf
             @method("DELETE")
             <button
                 class="border border-none bg-red-400 hover:bg-red-500 cursor-pointer text-white text-sm px-3 py-2 rounded"

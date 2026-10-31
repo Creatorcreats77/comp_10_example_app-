@@ -13,19 +13,38 @@
     <div class="container mx-auto">
         @include("components.header")
         <main>
+
+
+            @session('success')
+
+            <div class="pt-8 pb-4 px-16 bg-green-600 text-white rounded-b-4xl cursor-pointer hover:rounded-b-xl hover:bg-green-700 hover:shadow-xl text-2xl">
+                {{ session("success")}}
+            </div>
+
+            @endsession
+
+            @session('error')
+           <div class="py-4 px-16 bg-red-300 text-white rounded-2xl mt-8 text-2xl">
+                {{ session("error")}}
+            </div>
+            @endsession
+
             @if (Route::is('home'))
-            <div class="py-4 px-16 bg-green-300 rounded-2xl mt-8 text-2xl"> Bizin <span class="text-indigo-400 font-bold">SkillSwap</span> Programmamyza hos geldiniz!</div>
+            <div class="py-4 px-16 bg-green-300 rounded-2xl mt-8 text-2xl"> Bizin <span
+                    class="text-indigo-400 font-bold">SkillSwap</span> Programmamyza hos geldiniz!</div>
             @endif
 
             <div class="text-6xl py-12">@yield('content')</div>
 
-            <div class="text-4xl py-24">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero molestias accusamus provident eveniet fuga labore eius, id quia, similique recusandae quisquam quaerat, architecto officiis nesciunt a consequatur. Iusto, a omnis.</div>
+            <div class="text-4xl py-24">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero molestias
+                accusamus provident eveniet fuga labore eius, id quia, similique recusandae quisquam quaerat, architecto
+                officiis nesciunt a consequatur. Iusto, a omnis.</div>
         </main>
 
 
     </div>
 
-            @include("components.footer")
+    @include("components.footer")
 
 </body>
 

@@ -24,11 +24,9 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::delete('/user/delete/{id}', function($id){
-    dum
-    return $id;
-});
-
+// Route::delete('/user/delete/{id}', function($id){
+//     return "Men web.php icinde  " . $id;
+// });
 
 Route::delete('/user/delete/{id}', [UserController::class, 'destroy']);
 
