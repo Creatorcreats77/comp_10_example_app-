@@ -27,12 +27,11 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
+        $categories = Category::factory(3)->create();
 
-        $categories = Category::factory(3)->create();      
+        // $categories = ['T-shirt', "Shoes", "Bags"]
 
-        // $categories = ['T-shirt', "Shoes", "Bags"] 
-
-        foreach($categories as $category){
+        foreach ($categories as $category) {
             Product::factory(20)->create([
                 'category_id' => $category->id,
             ]);

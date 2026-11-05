@@ -17,10 +17,11 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->integer('age');
             $table->string('skill');
-            $table->string("skill_wanted");
+            $table->string('skill_wanted');
             $table->timestamps();
         });
     }
+
     /**
      * Reverse the migrations.
      */

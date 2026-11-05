@@ -19,12 +19,12 @@ class CarFactory extends Factory
     {
         return [
             'name' => fake()->name(),
-            'model' => fake()->randomElement(["BMW", 'Lexus', 'Toyota', 'Jetour', 'KIA', 'Ferrari']),
+            'model' => fake()->randomElement(['BMW', 'Lexus', 'Toyota', 'Jetour', 'KIA', 'Ferrari']),
             'price' => fake()->numberBetween(10000, 99999),
             'car_type' => fake()->randomElement(['Jip', 'Sedan', 'Pikap']),
             'car_color' => fake()->colorName(),
             'car_year' => fake()->year(),
-            "country" => fake()->country(),
+            'country' => fake()->country(),
         ];
     }
 }
