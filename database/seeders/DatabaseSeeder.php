@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
     {
         // Car::factory(10)->create();
         Car::factory(100)->create();
-        User::factory(100)->create();
+        // User::factory(100)->create();
 
         // User::factory()->create([
         //     'name' => 'Test User',
